@@ -2,13 +2,23 @@
   "name": "react-practice",
   "version": "1.0.0",
   "description": "this is chancdrakanths react practice",
-  "main": "App.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.15.4"
-  }
-}
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "browserslist": [
+    "last 10 Chrome version",
+    "last 2 Firefox version"
+
+  ]}
