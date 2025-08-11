@@ -5,7 +5,6 @@ const stylecard={
 
 const RestuarantCard = ({ resData }) => {
     const { info } = resData;
-
     return (
         <div className="res-card" style={stylecard}>
             <img
@@ -17,6 +16,7 @@ const RestuarantCard = ({ resData }) => {
             <h4>{info.cuisines.join(", ")}</h4>
             <h4>{info.avgRating}</h4>
             <h4>{info.costForTwo}</h4>
+            <h4>Delivery in {info.sla.deliveryTime} Minutes</h4>
         </div>
     );
 };

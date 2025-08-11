@@ -30,9 +30,7 @@
 .res-card:hover{
         border:1px solid black;
 }
-.search{
- padding:10px;
-}
+
 .res-logo{
   
     padding: 5px;
@@ -46,4 +44,8 @@
     flex-wrap: wrap;     /* allows wrapping to next row */
     gap: 16px;           /* space between cards */
     justify-content:left; /* align to left */
+}
+.filter-btn{
+    margin:10px;
+    cursor:pointer;
 }
