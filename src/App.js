@@ -1,51 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import RestuarantCard from "./components/RestuarantCard";
 // const heading =React.createElement("h1",{id:"heading"},"React Practice by  myself");
 
 
-const Header =()=>{
-    return (
-        <div className="header">
-            <div className="logo-container"> 
-                <img className="logo" src="https://webstockreview.net/images/clipart-restaurant-restaurant-logo-2.png" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
 
-        </div>
 
-    )
-}
-const stylecard={
-    backgroundColor:"rgb(248,248,255)"
-}
 
-const RestuarantCard = ({ resData }) => {
-    const { info } = resData;
-
-    return (
-        <div className="res-card" style={stylecard}>
-            <img
-                className="res-logo"
-                alt="res-logo"
-                src={
-                    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-                    info.cloudinaryImageId
-                }
-            />
-            <h3>{info.name}</h3>
-            <h4>{info.cuisines.join(", ")}</h4>
-            <h4>{info.avgRating}</h4>
-            <h4>{info.costForTwo}</h4>
-        </div>
-    );
-};
 
 const resList=[
                   {
@@ -1989,6 +1951,7 @@ const resList=[
                     }
                   }
 ];
+
 const Body=()=>{
     return(
         <div className="body">
