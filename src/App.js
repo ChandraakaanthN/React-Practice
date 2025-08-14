@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 // const heading =React.createElement("h1",{id:"heading"},"React Practice by  myself");
 const AppLayout=()=>{
+  
   return(
     <div>
      <Header/>
