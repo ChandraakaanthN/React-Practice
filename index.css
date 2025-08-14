@@ -63,3 +63,14 @@
     border-color: #757575;
     border-radius: 4px;
 }
+.login{
+    padding:0 20px;
+    cursor:pointer;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+.search{
+  padding-top: 6px;
+}
