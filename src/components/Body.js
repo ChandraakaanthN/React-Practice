@@ -44,8 +44,10 @@ const Body=()=>{
                 
                 
                 <button className="filter-btn" onClick={()=>{
-                const filteredList=listOfRestaurants.filter((res)=>res.info.avgRating>4.3);
-                setListOfRestaurants(filteredList);
+                const filteredList=listOfRestaurants.filter(
+                     (res) => parseFloat(res.info.avgRating) > 4.5);
+            
+                       setfilteredRestuarant(filteredList);
 
                }} >Top Rated Restaurant
                 </button> 
@@ -55,7 +57,7 @@ const Body=()=>{
             <div className="res-container">
                   {filteredRestuarant.map((restaurant) =>  
                     (
-                 <Link 
+                 <Link className="custom-link"
                  key={restaurant.info.id} 
                  to={"/restaurants/"+restaurant.info.id}>
                      <RestuarantCard  resData={restaurant} />
