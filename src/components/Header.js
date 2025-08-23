@@ -1,6 +1,7 @@
 import {LOGO_URL} from "../utils/constants.js";
 import {useState,useEffect} from "react";
 import {Link} from "react-router-dom";
+import {useOnlineStatus} from "../utils/useOnlineStatus.js";
 const Header =()=>{
  
     const [btnName,setbtnName]=useState("Login");
@@ -20,6 +21,9 @@ const Header =()=>{
                     </li>
                     <li>
                         <Link to="/Contact"> Contact</Link>
+                    </li>
+                    <li>
+                       < Link to="/Grocery"> Grocery</Link>  
                     </li>
             
                     
