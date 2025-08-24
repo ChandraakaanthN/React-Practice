@@ -1,14 +1,14 @@
 import {CDN_URL} from "../utils/constants.js";
 const stylecard={
-    backgroundColor:"rgb(248,248,255)"
+    backgroundColor:"#DBD8D8"
 }
 
 const RestuarantCard = ({ resData }) => {
     const { info } = resData;
     return (
-        <div className="res-card" style={stylecard}>
+        <div className="m-2.5 p-2 pb-4 w-[250px] h-[420px] " style={stylecard}>
             <img
-                    className="res-logo"
+                    className="rounded-lg w-full h-[245px]"
                 alt="res-logo"
                 src={CDN_URL +info.cloudinaryImageId}
             />
@@ -20,4 +20,5 @@ const RestuarantCard = ({ resData }) => {
         </div>
     );
 };
+
 export default RestuarantCard;
