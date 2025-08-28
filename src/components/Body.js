@@ -37,7 +37,7 @@ const Body=()=>{
                         setsearchText(e.target.value);
                     }}>
                     </input>
-             <button className="px-4 py-2 bg-green-100 m-4"
+             <button className="px-4 py-2 bg-red-100 m-4 rounded-lg"
               onClick={() => {
     const filteredres = listOfRestaurants.filter((res) => 
         res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -46,7 +46,7 @@ const Body=()=>{
 }}>
     Search
 </button>
-  <button className="filter-btn px-4 py-2  bg-gray-100 rounded-b-lg" onClick={()=>{
+  <button className="filter-btn px-4 py-2  bg-gray-100 rounded-lg" onClick={()=>{
                 const filteredList=listOfRestaurants.filter(
                      (res) => parseFloat (res.info.avgRating) > 4.5);
             
@@ -56,12 +56,10 @@ const Body=()=>{
                 </button> 
                 </div>
                 
-               
-               
            </div>
 
 
-            <div className="res-container flex flex-wrap p-2">
+            <div className="res-container flex flex-wrap pl-7 p-2">
                   {filteredRestuarant.map((restaurant) =>  
                     (
                  <Link className="custom-link"
