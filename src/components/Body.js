@@ -1,15 +1,15 @@
-import RestuarantCard from "./RestuarantCard";
+import RestuarantCard,{withPromotedLabel} from "./RestuarantCard";
 import {useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import {useOnlineStatus} from "../utils/useOnlineStatus.js";
-
 const Body=()=>{
 
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
     const [searchText,setsearchText]=useState("");
     const [filteredRestuarant,setfilteredRestuarant]=useState([]);
-    console.log("Body Rendered");
+    console.log("Body Rendered",listOfRestaurants);
+    const PromotedCard=withPromotedLabel(RestuarantCard);
     useEffect(()=>{
         console.log("useEffect Called");
         fetchData();
@@ -59,13 +59,14 @@ const Body=()=>{
            </div>
 
 
-            <div className="res-container flex flex-wrap pl-7 p-2">
+            <div className="res-container flex flex-wrap pl-7 p-2 bg-gray-50 hover:bg-gray-100">
                   {filteredRestuarant.map((restaurant) =>  
                     (
                  <Link className="custom-link"
                  key={restaurant.info.id} 
                  to={"/restaurants/"+restaurant.info.id}>
-                     <RestuarantCard  resData={restaurant} />
+                    {restaurant.info.isOpen ? <PromotedCard resData={restaurant} /> :
+                     <RestuarantCard  resData={restaurant} />}
                  </Link>  
                     ))
                    }

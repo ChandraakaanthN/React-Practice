@@ -22,10 +22,17 @@ const Header =()=>{
                     <li className="px-8">
                         <Link to="/Contact"> Contact</Link>
                     </li>
-                    <li className="px-8">
-                       < Link to="/Grocery"> Grocery</Link>  
+                    
+                     <button className="bg-transparent hover:border-white">
+  
+                                 <li className="px-8">
+                              < Link to="/Grocery"> Grocery</Link> 
                     </li> 
-                    <li className="px-8">Cart</li>
+  </button>
+                   
+           
+                    <li className="px-8" >Cart</li>
+                     
                     <button className="px-8"  onClick={()=>{
                         btnName=="Login"?setbtnName("Logout"):setbtnName("Login");
                     }}>{btnName}</button>
