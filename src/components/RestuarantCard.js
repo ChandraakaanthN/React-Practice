@@ -22,7 +22,7 @@ export const withPromotedLabel=(RestuarantCard)=>{
     return (props)=>{
           const { resData } = props;
     const { isOpened } = resData.info;
-    console.log(props);
+    
         return (
             <div>
                 <button className="bg-black text-white absolute m-2.5 p-1 rounded-lg">opened</button>
