@@ -1,8 +1,9 @@
 import RestuarantCard,{withPromotedLabel} from "./RestuarantCard";
-import {useState,useEffect} from "react";
+import {useState,useEffect,useContext} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import {useOnlineStatus} from "../utils/useOnlineStatus.js";
+import  UserContext from "../utils/UserContext.js";
 const Body=()=>{
 
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
@@ -25,6 +26,8 @@ const Body=()=>{
     const onlineStatus = useOnlineStatus();
     if(onlineStatus===false) return <h1>🔴 Offline, Please check your Internet Connection</h1>
 
+    const {loggedInUser,SetUserName}=useContext(UserContext);
+    
 
     return listOfRestaurants.length===0? <Shimmer/> :(
         <div className="body  ">
@@ -54,6 +57,7 @@ const Body=()=>{
 
                }} >Top Rated Restaurant
                 </button> 
+                <input type="text" className="border border-black p-2" value={loggedInUser} onChange={(e)=>SetUserName(e.target.value)}></input>
                 </div>
                 
            </div>
